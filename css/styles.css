@@ -55,8 +55,8 @@ ul {
 }
 
 li {
-  margin: 0px;
-  padding: 0px;
+  margin: 10px 10px;
+  padding: 10px 10px;
   text-align: left;
 }
 
@@ -239,7 +239,7 @@ textarea {
   font-size: 1em;
 }
 
-@media (min-width: 525px) {
+@media (min-width: 650px) {
   header {
     justify-content: start;
   }
