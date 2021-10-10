@@ -1,0 +1,324 @@
+body {
+  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f2f2f2;
+  color: #0a3641;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+  border: 1px solid #0a3641;
+}
+
+nav {
+  margin-left: 30px;
+  display: none;
+  position: fixed;
+  top: 86px;
+  background: #f2f2f2;
+  z-index: 100;
+  right: 0px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 20px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+li {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+.icons {
+  font-size: 3em;
+}
+
+footer {
+  background-color: #0a3641;
+  color: #f2f2f2;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #0a3641;
+}
+
+header a {
+  color: #0a3641;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.underline {
+  text-decoration: underline solid #f2c75c;
+}
+
+.cta {
+  background-color: #f2c75c;
+  color: #0a3641;
+  font-size: 1.5em;
+  padding: 20px 60px;
+}
+
+/* Hover */
+a:hover {
+  text-decoration: underline solid #f2c75c;
+  color: #0a3641;
+}
+
+header a:hover {
+  color: #0a3641;
+  padding: 20px;
+  font-size: 1.5em;
+  text-decoration: underline solid #f2c75c;
+}
+
+.cta:hover {
+  background-color: #0a3641;
+  color: #f2f2f2;
+  font-size: 1.5em;
+  padding: 20px 60px;
+  text-decoration: none;
+}
+
+.new-arrivals img:hover {
+  box-shadow: 1px 1px 5px #000000;
+}
+
+/* Home page */
+
+.front-image {
+  background-image: url("../images/hiking.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  min-height: 50vh;
+  position: relative;
+  margin: 60px 20px;
+}
+
+.new-arrivals {
+  display: grid;
+  grid-template-columns: (1fr);
+  margin: 0px 20px;
+  gap: 10px;
+}
+
+.new-arrivals h2 {
+  font-size: 2em;
+  grid-column: -1/1;
+}
+
+.new-arrivals img {
+  width: 100%;
+}
+
+.products h3 {
+  font-size: 1.5em;
+  margin: 0px;
+  padding: 5px 5px 5px 0px;
+  text-transform: uppercase;
+}
+
+.products p {
+  font-size: 1em;
+  margin: 0px;
+  padding: 2px 2px 2px 0px;
+}
+
+.about-us {
+  background-image: url("../images/kayaking.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 50vh;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.about-us-content {
+  position: relative;
+  text-align: center;
+  top: 200px;
+}
+
+.about-us-content h2 {
+  font-size: 4em;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.contact-us {
+  display: grid;
+  grid-template-columns: (1fr);
+  margin: 0px 20px;
+  padding: 50px 0px;
+  gap: 50px;
+}
+
+.contact-content h2 {
+  font-size: 4em;
+  margin: 10px 0px;
+}
+
+.contact-content p {
+  font-size: 1em;
+  padding: 20px 0px;
+}
+
+input,
+select,
+textarea {
+  background-color: #f2f2f2;
+  border: 2px solid #e2e2e2;
+  border-radius: 1px;
+  margin: 15px 15px 15px 0px;
+  padding: 10px 10px 10px 0px;
+  font-size: 1em;
+}
+
+.contact-form {
+  font-size: 1.5em;
+}
+
+.contact-form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  background-color: #e2e2e2;
+  padding: 50px 0px 50px 20px;
+  display: grid;
+  grid-template-columns: (1fr);
+  gap: 10px;
+}
+
+.information-content h3 {
+  font-size: 2em;
+}
+
+.information-content-icons {
+  font-size: 1em;
+}
+
+@media (min-width: 525px) {
+  header {
+    justify-content: start;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  header label {
+    display: none;
+  }
+
+  .front-image {
+    background-image: url("../images/hiking.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
+    min-height: 50vh;
+    position: relative;
+    margin: 60px 20px;
+  }
+
+  .new-arrivals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-us {
+    background-image: url("../images/kayaking.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    position: relative;
+    margin: 0px 20px;
+  }
+
+  .contact-us {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .information {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .front-image {
+    background-image: url("../images/hiking.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
+    min-height: 50vh;
+    position: relative;
+    margin: 60px 20px;
+  }
+
+  .new-arrivals {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about-us {
+    background-image: url("../images/kayaking.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    position: relative;
+    margin: 0px 20px;
+  }
+
+  .information {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
