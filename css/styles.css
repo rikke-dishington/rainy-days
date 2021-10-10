@@ -146,7 +146,8 @@ header a:hover {
 }
 
 .new-arrivals img {
-  width: 100%;
+  width: 70%;
+  margin: 0% 10%;
 }
 
 .products h3 {
@@ -239,7 +240,7 @@ textarea {
   font-size: 1em;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
   header {
     justify-content: start;
   }
@@ -273,6 +274,11 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .new-arrivals img {
+    width: 80%;
+    margin: 0px;
+  }
+
   .about-us {
     background-image: url("../images/kayaking.jpeg");
     background-size: cover;
@@ -292,7 +298,7 @@ textarea {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .front-image {
     background-image: url("../images/hiking.jpeg");
     background-size: cover;
@@ -306,6 +312,11 @@ textarea {
 
   .new-arrivals {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .new-arrivals img {
+    width: 100%;
+    margin: 0px;
   }
 
   .about-us {
