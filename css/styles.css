@@ -333,3 +333,55 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* About Page */
+
+.breadcrumbs {
+  margin: 60px 20px 10px 20px;
+  border: 2px solid #0a3641;
+}
+
+.breadcrumbs ul {
+  margin: 0px;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  text-align: left;
+  border: 2px solid #f2c75c;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0px 20px;
+  gap: 50px;
+  border: 3px solid #f2c75c;
+}
+
+.about-img {
+  border: 1px solid #0a3641;
+  background-image: url("../images/hiking.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.about-text h1 {
+  margin: 0px;
+  font-size: 4em;
+  border: 2px solid #0023ae;
+}
+
+.about-text h2 {
+  font-size: 2em;
+}
+
+.about-text p {
+  font-size: 1em;
+}
+
+.about-text-content {
+  border: 2px solid #00f94f;
+}
