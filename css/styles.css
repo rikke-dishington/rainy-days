@@ -6,11 +6,20 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
 p {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
 }
 
 header {
@@ -23,7 +32,6 @@ header {
 }
 
 nav {
-  margin-left: 30px;
   display: none;
   position: fixed;
   top: 86px;
@@ -37,7 +45,7 @@ nav ul {
 }
 
 nav li {
-  display: block;
+  display: inline;
   padding: 20px 20px;
 }
 
@@ -55,21 +63,11 @@ ul {
 }
 
 li {
-  margin: 10px 10px;
-  padding: 10px 10px;
   text-align: left;
 }
 
 .icons {
   font-size: 3em;
-}
-
-footer {
-  background-color: #0a3641;
-  color: #f2f2f2;
-  font-size: 1em;
-  text-align: center;
-  padding: 10px;
 }
 
 /* Links */
@@ -85,7 +83,7 @@ header a {
 }
 
 .underline {
-  text-decoration: underline solid #f2c75c;
+  text-decoration: underline solid 4px #f2c75c;
 }
 
 .cta {
@@ -97,7 +95,7 @@ header a {
 
 /* Hover */
 a:hover {
-  text-decoration: underline solid #f2c75c;
+  text-decoration: underline solid 4px #f2c75c;
   color: #0a3641;
 }
 
@@ -105,7 +103,7 @@ header a:hover {
   color: #0a3641;
   padding: 20px;
   font-size: 1.5em;
-  text-decoration: underline solid #f2c75c;
+  text-decoration: underline solid 4px #f2c75c;
 }
 
 .cta:hover {
@@ -224,22 +222,6 @@ textarea {
   flex-direction: column;
 }
 
-.information {
-  background-color: #e2e2e2;
-  padding: 50px 0px 50px 20px;
-  display: grid;
-  grid-template-columns: (1fr);
-  gap: 10px;
-}
-
-.information-content h3 {
-  font-size: 2em;
-}
-
-.information-content-icons {
-  font-size: 1em;
-}
-
 @media (min-width: 750px) {
   header {
     justify-content: start;
@@ -293,11 +275,6 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .information {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (min-width: 900px) {
   .front-image {
     background-image: url("../images/hiking.jpeg");
@@ -328,60 +305,101 @@ textarea {
     position: relative;
     margin: 0px 20px;
   }
-
-  .information {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* About Page */
 
-.breadcrumbs {
-  margin: 60px 20px 10px 20px;
-  border: 2px solid #0a3641;
+.about-us-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "bread bread bread bread"
+    "content1 content1 content2 content2"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  text-align: left;
 }
 
-.breadcrumbs ul {
-  margin: 0px;
+header {
+  grid-area: nav;
+}
+
+.breadcrumbs {
+  grid-area: bread;
+  margin: 60px 0px 0px 0px;
 }
 
 .breadcrumbs li {
-  display: inline-block;
-  text-align: left;
-  border: 2px solid #f2c75c;
+  display: inline;
 }
 
-.about-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0px 20px;
-  gap: 50px;
-  border: 3px solid #f2c75c;
+.breadcrumbs li:not(:last-of-type)::after {
+  content: ">";
+  margin: 0px 5px;
+  color: #0a3641;
 }
 
-.about-img {
-  border: 1px solid #0a3641;
+.content1 {
+  grid-area: content1;
   background-image: url("../images/hiking.jpeg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position-x: left;
-  background-position-y: bottom;
+  background-position: top;
+  margin: 0px 20px;
 }
 
-.about-text h1 {
-  margin: 0px;
-  font-size: 4em;
-  border: 2px solid #0023ae;
+.content2 {
+  grid-area: content2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "h1 h1 h1 h1"
+    "h2 h2 h3 h3";
+  margin: 0px 20px;
+  grid-gap: 4em;
 }
 
-.about-text h2 {
-  font-size: 2em;
+.h1 {
+  grid-area: h1;
 }
 
-.about-text p {
-  font-size: 1em;
+.h2 {
+  grid-area: h2;
 }
 
-.about-text-content {
-  border: 2px solid #00f94f;
+.h3 {
+  grid-area: h3;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Footer */
+footer {
+  background-color: #0a3641;
+}
+
+footer a {
+  display: block;
+  float: left;
+}
+
+.footer-content1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #e2e2e2;
+  text-align: left;
+  padding: 0px 20px;
+  grid-gap: 4em;
+}
+
+.footer-content2 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
 }
