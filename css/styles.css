@@ -118,6 +118,39 @@ header a:hover {
   box-shadow: 1px 1px 5px #000000;
 }
 
+/* Footer */
+footer {
+  background-color: #0a3641;
+}
+
+footer a {
+  display: block;
+  float: left;
+}
+
+.footer-content1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #e2e2e2;
+  text-align: left;
+  padding: 0px 20px;
+  grid-gap: 4em;
+}
+
+.footer-item1, 
+.footer-item3, 
+.footer-item4 {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer-content2 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+}
+
 /* Home page */
 
 .front-image {
@@ -193,12 +226,10 @@ header a:hover {
 }
 
 .contact-content h2 {
-  font-size: 4em;
   margin: 10px 0px;
 }
 
 .contact-content p {
-  font-size: 1em;
   padding: 20px 0px;
 }
 
@@ -342,7 +373,7 @@ header {
   color: #0a3641;
 }
 
-.content1 {
+.about-content1 {
   grid-area: content1;
   background-image: url("../images/hiking.jpeg");
   background-size: contain;
@@ -351,7 +382,7 @@ header {
   margin: 0px 20px;
 }
 
-.content2 {
+.about-content2 {
   grid-area: content2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -379,27 +410,52 @@ footer {
   grid-area: footer;
 }
 
-/* Footer */
-footer {
-  background-color: #0a3641;
-}
+/* Contact page */
 
-footer a {
-  display: block;
-  float: left;
-}
-
-.footer-content1 {
+.contact-container {
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #e2e2e2;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "bread bread bread bread"
+    "content1 content1 content2 content2"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
   text-align: left;
-  padding: 0px 20px;
-  grid-gap: 4em;
 }
 
-.footer-content2 {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 10px 10px;
+header {
+  grid-area: nav;
+}
+
+.breadcrumbs {
+  grid-area: bread;
+  margin: 60px 0px 0px 0px;
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+  content: ">";
+  margin: 0px 5px;
+  color: #0a3641;
+}
+
+.contact-content1 {
+  grid-area: content1;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.contact-content2 {
+  grid-area: content2;
+}
+
+footer {
+  grid-area: footer;
 }
