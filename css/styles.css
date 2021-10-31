@@ -24,39 +24,33 @@ p {
 
 header {
   width: 100%;
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #f2f2f2;
   border: 1px solid #0a3641;
+  font-size: 2em;
+}
+
+.logo {
+  width: 100px;
+  margin: 0px 0px 0px 20px;
 }
 
 nav {
-  display: none;
-  position: fixed;
-  top: 86px;
-  background: #f2f2f2;
-  z-index: 100;
-  right: 0px;
+  flex: 1;
 }
 
-nav ul {
-  padding: 0px;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 20px;
 }
 
-nav li {
-  display: inline;
-  padding: 20px 20px;
+.header-icons {
+  padding: 0px 20px;
 }
 
-#hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ nav {
-  display: block;
-}
-
+/*
 ul {
   list-style-type: none;
   text-align: left;
@@ -66,6 +60,8 @@ li {
   text-align: left;
 }
 
+*/
+
 .icons {
   font-size: 3em;
 }
@@ -74,12 +70,6 @@ li {
 a {
   text-decoration: none;
   color: #0a3641;
-}
-
-header a {
-  color: #0a3641;
-  padding: 20px;
-  font-size: 1.5em;
 }
 
 .underline {
@@ -97,13 +87,6 @@ header a {
 a:hover {
   text-decoration: underline solid 4px #f2c75c;
   color: #0a3641;
-}
-
-header a:hover {
-  color: #0a3641;
-  padding: 20px;
-  font-size: 1.5em;
-  text-decoration: underline solid 4px #f2c75c;
 }
 
 .cta:hover {
@@ -137,12 +120,11 @@ footer a {
   grid-gap: 4em;
 }
 
-.footer-item1, 
-.footer-item3, 
+.footer-item1,
+.footer-item3,
 .footer-item4 {
   display: flex;
   flex-direction: column;
-  
 }
 
 .footer-content2 {
@@ -253,93 +235,8 @@ textarea {
   flex-direction: column;
 }
 
-@media (min-width: 750px) {
-  header {
-    justify-content: start;
-  }
-
-  nav {
-    display: block;
-    position: static;
-  }
-
-  nav li {
-    display: inline-block;
-    padding: 0px;
-  }
-
-  header label {
-    display: none;
-  }
-
-  .front-image {
-    background-image: url("../images/hiking.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: bottom;
-    min-height: 50vh;
-    position: relative;
-    margin: 60px 20px;
-  }
-
-  .new-arrivals {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .new-arrivals img {
-    width: 80%;
-    margin: 0px;
-  }
-
-  .about-us {
-    background-image: url("../images/kayaking.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-    position: relative;
-    margin: 0px 20px;
-  }
-
-  .contact-us {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-@media (min-width: 900px) {
-  .front-image {
-    background-image: url("../images/hiking.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: bottom;
-    min-height: 50vh;
-    position: relative;
-    margin: 60px 20px;
-  }
-
-  .new-arrivals {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .new-arrivals img {
-    width: 100%;
-    margin: 0px;
-  }
-
-  .about-us {
-    background-image: url("../images/kayaking.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-    position: relative;
-    margin: 0px 20px;
-  }
-}
-
 /* Women */
-.about-us-container {
+.women-container {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -360,30 +257,38 @@ header {
 }
 
 .women-content1 {
- grid-area: content1;
- background-image: url("../images/kayaking.jpeg");
- background-size: cover;
- background-repeat: no-repeat;
- background-position-x: center;
- background-position-y: bottom;
- min-height: 50vh;
- position: relative;
- margin: 0px 20px;
+  grid-area: content1;
+  background-image: url("../images/women.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 50vh;
+  position: relative;
+  margin: 0px 20px;
 }
 
 .women-content2 {
   grid-area: content2;
-
- }
- 
- .women-content3 {
-  grid-area: content3;
- }
-
- footer {
-  grid-area: footer;
 }
 
+.order-by-box {
+  padding: 20px;
+  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
+  color: #0a3641;
+  border: 1px solid #0a3641;
+  margin: 60px 20px;
+}
+
+.new-arrivals {
+  grid-area: content3;
+  margin: 0px 20px 60px 20px;
+}
+
+footer {
+  grid-area: footer;
+}
 
 /* About Page */
 
