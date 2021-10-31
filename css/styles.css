@@ -245,6 +245,11 @@ header {
   grid-area: nav;
 }
 
+.breadcrumbs {
+  grid-area: bread;
+  margin: 60px 0px 0px 0px;
+}
+
 .women-content1 {
   grid-area: content1;
   background-image: url("../images/women.jpeg");
@@ -260,6 +265,7 @@ header {
 .women-content2 {
   grid-area: content2;
   grid-column: 4;
+  margin: 40px 0px 0px 0px;
 }
 
 .order-by-box {
@@ -270,9 +276,100 @@ header {
   border: 1px solid #0a3641;
 }
 
-.new-arrivals {
+.women-content3 {
   grid-area: content3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0px 20px 60px 20px;
+  grid-gap: 2em;
+}
+
+.women-content3 h2 {
+  grid-column: -1/1;
+}
+
+.women-content3 img {
+  width: 100%;
+}
+
+.women-content3-items {
+  text-transform: uppercase;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Men */
+.men-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "bread bread bread bread"
+    "content1 content1 content1 content1"
+    "content2 content2 content2 content2"
+    "content3 content3 content3 content3"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+header {
+  grid-area: nav;
+}
+
+.breadcrumbs {
+  grid-area: bread;
+  margin: 60px 0px 0px 0px;
+}
+
+.men-content1 {
+  grid-area: content1;
+  background-image: url("../images/men.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  min-height: 50vh;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.men-content2 {
+  grid-area: content2;
+  grid-column: 4;
+  margin: 40px 0px 0px 0px;
+}
+
+.order-by-box {
+  padding: 20px;
+  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
+  color: #0a3641;
+  border: 1px solid #0a3641;
+}
+
+.men-content3 {
+  grid-area: content3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0px 20px 60px 20px;
+  grid-gap: 2em;
+}
+
+.men-content3 h2 {
+  grid-column: -1/1;
+}
+
+.men-content3 img {
+  width: 100%;
+}
+
+.men-content3-items {
+  text-transform: uppercase;
 }
 
 footer {
