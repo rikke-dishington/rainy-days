@@ -50,18 +50,6 @@ nav ul li {
   padding: 0px 20px;
 }
 
-/*
-ul {
-  list-style-type: none;
-  text-align: left;
-}
-
-li {
-  text-align: left;
-}
-
-*/
-
 .icons {
   font-size: 3em;
 }
@@ -83,6 +71,13 @@ a {
   padding: 20px 60px;
 }
 
+.cta-contact-form {
+  background-color: #f2c75c;
+  color: #0a3641;
+  font-size: 1em;
+  padding: 20px 60px;
+}
+
 /* Hover */
 a:hover {
   text-decoration: underline solid 4px #f2c75c;
@@ -97,87 +92,74 @@ a:hover {
   text-decoration: none;
 }
 
+.cta-contact-form:hover {
+  background-color: #0a3641;
+  color: #f2f2f2;
+  font-size: 1em;
+  padding: 20px 60px;
+  text-decoration: none;
+}
+
 .new-arrivals img:hover {
   box-shadow: 1px 1px 5px #000000;
 }
 
-/* Footer */
-footer {
-  background-color: #0a3641;
-}
-
-footer a {
-  display: block;
-  float: left;
-}
-
-.footer-content1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #e2e2e2;
-  text-align: left;
-  padding: 0px 20px;
-  grid-gap: 4em;
-}
-
-.footer-item1,
-.footer-item3,
-.footer-item4 {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-content2 {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 10px 10px;
-}
-
 /* Home page */
 
-.front-image {
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "content1 content1 content1 content1"
+    "content2 content2 content2 content2"
+    "content3 content3 content3 content3"
+    "content4 content4 content4 content4"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+header {
+  grid-area: nav;
+}
+
+.home-content1 {
+  grid-area: content1;
   background-image: url("../images/hiking.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: left;
-  background-position-y: bottom;
+  background-position-x: center;
+  background-position-y: center;
   min-height: 50vh;
   position: relative;
   margin: 60px 20px;
 }
 
-.new-arrivals {
+.home-content2 {
+  grid-area: content2;
   display: grid;
-  grid-template-columns: (1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0px 20px;
-  gap: 10px;
+  grid-gap: 2em;
 }
 
-.new-arrivals h2 {
-  font-size: 2em;
+.home-content2 h2 {
   grid-column: -1/1;
 }
 
-.new-arrivals img {
-  width: 70%;
-  margin: 0% 10%;
+.home-content2 img {
+  width: 100%;
 }
 
-.products h3 {
-  font-size: 1.5em;
-  margin: 0px;
-  padding: 5px 5px 5px 0px;
+.home-content2-items {
   text-transform: uppercase;
 }
 
-.products p {
-  font-size: 1em;
-  margin: 0px;
-  padding: 2px 2px 2px 0px;
-}
-
-.about-us {
-  background-image: url("../images/kayaking.jpeg");
+.home-content3 {
+  grid-area: content3;
+  background-image: url("/images/kayaking.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -187,32 +169,48 @@ footer a {
   margin: 0px 20px;
 }
 
-.about-us-content {
+.home-content3-item {
   position: relative;
   text-align: center;
   top: 200px;
 }
 
-.about-us-content h2 {
+.home-content3-item h2 {
   font-size: 4em;
   color: #f2f2f2;
   text-shadow: 1px 1px 5px #000000;
 }
 
-.contact-us {
-  display: grid;
-  grid-template-columns: (1fr);
-  margin: 0px 20px;
-  padding: 50px 0px;
-  gap: 50px;
+.home-content4 {
+  grid-area: content4;
+  display: flex;
+  margin: 60px 20px;
 }
 
-.contact-content h2 {
-  margin: 10px 0px;
+.home-content4 * {
+  flex: 1;
 }
 
-.contact-content p {
-  padding: 20px 0px;
+.home-content4-item {
+  margin: 0px 60px 0px 0px;
+}
+
+.home-content4 h2 {
+  font-size: 3em;
+  margin: 0px;
+}
+
+.home-content4 p {
+  margin: 20px 0px 60px 0px;
+}
+
+.contact-form {
+  font-size: 1.5em;
+}
+
+.contact-form-content {
+  display: flex;
+  flex-direction: column;
 }
 
 input,
@@ -224,15 +222,6 @@ textarea {
   margin: 15px 15px 15px 0px;
   padding: 10px 10px 10px 0px;
   font-size: 1em;
-}
-
-.contact-form {
-  font-size: 1.5em;
-}
-
-.contact-form-content {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Women */
@@ -270,6 +259,7 @@ header {
 
 .women-content2 {
   grid-area: content2;
+  grid-column: 4;
 }
 
 .order-by-box {
@@ -278,7 +268,6 @@ header {
   font-size: 1.5em;
   color: #0a3641;
   border: 1px solid #0a3641;
-  margin: 60px 20px;
 }
 
 .new-arrivals {
@@ -410,4 +399,37 @@ header {
 
 footer {
   grid-area: footer;
+}
+
+/* Footer */
+footer {
+  background-color: #0a3641;
+}
+
+footer a {
+  display: block;
+  float: left;
+  padding: 0px 0px 20px 0px;
+}
+
+.footer-content1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #e2e2e2;
+  text-align: left;
+  padding: 40px 20px;
+  grid-gap: 4em;
+}
+
+.footer-item1,
+.footer-item3,
+.footer-item4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content2 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
 }
