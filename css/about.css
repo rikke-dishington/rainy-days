@@ -1,0 +1,79 @@
+/* About */
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+header {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "bread bread bread bread"
+    "content1 content1 content2 content2";
+}
+
+.breadcrumbs {
+  grid-area: bread;
+}
+
+.about-content1 {
+  grid-area: content1;
+  background-image: url("../images/about-us.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  height: 50vh;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.about-content2 {
+  grid-area: content2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "item1 item1 item1 item1"
+    "item2 item2 item3 item3";
+  margin: 0px 20px;
+  grid-gap: 4em;
+}
+
+.about-content2-item1 {
+  grid-area: item1;
+}
+
+.about-content2-item1 h1 {
+  margin: 0px;
+}
+
+.about-content2-item2 {
+  grid-area: item2;
+}
+
+.about-content2-item3 {
+  grid-area: item3;
+}
+
+.about-content2-item2 h2,
+.about-content2-item3 h2 {
+  margin: 0px;
+}
+
+footer {
+  grid-area: footer;
+}

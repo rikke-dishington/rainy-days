@@ -1,0 +1,74 @@
+/* Men */
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+header {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "bread bread bread bread"
+    "content1 content1 content1 content1"
+    "content2 content2 content2 content2"
+    "content3 content3 content3 content3";
+}
+
+.breadcrumbs {
+  grid-area: bread;
+}
+
+.men-content1 {
+  grid-area: content1;
+  background-image: url("../images/men.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 50vh;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.men-content2 {
+  grid-area: content2;
+  grid-column: 4;
+  margin: 40px 0px 0px 0px;
+}
+
+.men-content3 {
+  grid-area: content3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0px 20px 60px 20px;
+  grid-gap: 2em;
+}
+
+.men-content3 h2 {
+  grid-column: -1/1;
+}
+
+.men-content3 img {
+  width: 100%;
+}
+
+.men-content3-items {
+  text-transform: uppercase;
+}
+
+footer {
+  grid-area: footer;
+}
