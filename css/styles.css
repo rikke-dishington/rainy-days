@@ -152,12 +152,13 @@ textarea {
 
 /* Order by box */
 .order-by-box {
-  padding: 20px;
   font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: #f2f2f2;
   color: #0a3641;
   border: 1px solid #0a3641;
+  padding: 20px;
+  margin: 0px;
 }
 
 /* Footer */
