@@ -1,4 +1,4 @@
-/* Jacket Front*/
+/* Jacket Back*/
 body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -7,8 +7,6 @@ body {
     "nav nav nav nav"
     "main main main main"
     "footer footer footer footer";
-  background-color: #f2f2f2;
-  text-align: left;
 }
 
 header {
@@ -103,18 +101,6 @@ main {
   grid-template-columns: repeat(4, 1fr);
   margin: 60px 20px;
   grid-gap: 2em;
-}
-
-.home-content2 h2 {
-  grid-column: -1/1;
-}
-
-.home-content2 img {
-  width: 100%;
-}
-
-.home-content2-items {
-  text-transform: uppercase;
 }
 
 footer {
