@@ -127,7 +127,7 @@ a:hover {
 }
 
 .jackets-list-content img:hover {
-  box-shadow: 1px 1px 5px #000000;
+  box-shadow: 10px 10px 30px #0a3641;
 }
 
 /* Contact form */
@@ -141,7 +141,6 @@ a:hover {
 }
 
 input,
-select,
 textarea {
   background-color: #f2f2f2;
   border: 2px solid #e2e2e2;
@@ -175,6 +174,17 @@ textarea {
 .order-by-box {
   font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
+  background-color: #f2f2f2;
+  color: #0a3641;
+  border: 1px solid #0a3641;
+  padding: 20px;
+  margin: 0px;
+}
+
+.order-by-box-checkout {
+  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
   background-color: #f2f2f2;
   color: #0a3641;
   border: 1px solid #0a3641;
