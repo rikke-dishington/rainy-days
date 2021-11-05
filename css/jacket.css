@@ -1,4 +1,4 @@
-/* Jacket Front*/
+/* Jacket */
 body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,7 +33,7 @@ main {
   grid-area: content1;
   display: flex;
   flex-direction: row;
-  margin: 0px 20px;
+  margin-left: 20px;
 }
 
 .jacket-specific > * {
@@ -46,7 +46,6 @@ main {
 }
 
 .jacket-image {
-  width: 100%;
   border: 1px solid #0a3641;
 }
 
@@ -57,18 +56,18 @@ main {
   margin-right: 40px;
 }
 
-.jacket-specific__details {
+.jacket-specific-details {
   margin-left: 20px;
   margin-right: 60px;
 }
 
-.jacket-specific__details h1,
-.jacket-specific__details h2 {
+.jacket-specific-details h1,
+.jacket-specific-details h2 {
   text-transform: uppercase;
   margin: 0px;
 }
 
-.jacket-specific__details h2 {
+.jacket-specific-details h2 {
   color: #6a7356;
 }
 

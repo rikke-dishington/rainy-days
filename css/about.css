@@ -27,16 +27,10 @@ main {
   grid-area: bread;
 }
 
-.about-content1 {
+.large-image {
   grid-area: content1;
-  background-image: url("../images/about-us.jpeg");
+  background: url("../images/about-us.jpeg") center no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  height: 50vh;
-  position: relative;
-  margin: 0px 20px;
 }
 
 .about-content2 {

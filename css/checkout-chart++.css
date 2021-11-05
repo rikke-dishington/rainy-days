@@ -1,4 +1,4 @@
-/* Checkout chart*/
+/* Checkout styling */
 body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -37,7 +37,6 @@ main {
 
 .checkout-content1 {
   grid-area: content1;
-  font-size: 1.5em;
   margin: 0px 20px;
 }
 
@@ -46,56 +45,36 @@ main {
   margin: 0px 0px 10px 0px;
 }
 
-.checkout-content1 p {
+.chart-empty-content1-items p,
+.chart-content1-items p {
   text-transform: uppercase;
 }
 
-.chart-content1-items {
+.chart-empty-content1-items,
+.chart-content1-items,
+.chart-delivery-content1-items,
+.checkout-delivery-options {
   border: 1px solid #0a3641;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: left;
-  gap: 10px;
-  align-items: center;
-}
-
-.chart-content1-items > * {
-  flex: 1;
-  margin: 20px auto 200px auto;
-}
-
-.checkout-icon {
-  font-size: 1.5em;
-}
-
-.checkout-product {
-  display: flex;
-  align-items: center;
-}
-
-.checkout-product img {
-  width: 100%;
 }
 
 .checkout-content2 {
   grid-area: content2;
-  font-size: 1.5em;
   margin: 0px 20px;
 }
 
-.checkout-content2-form {
+.checkout-form {
+  font-size: 1.5em;
   display: flex;
   text-align: left;
 }
 
-.checkout-content2-form > * {
+.checkout-form > * {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.checkout-content2-form input {
+.checkout-form input {
   background-color: #f2f2f2;
   border: 2px solid #e2e2e2;
   border-radius: 1px;
@@ -106,4 +85,68 @@ main {
 
 footer {
   grid-area: footer;
+}
+
+/* Checkout empty*/
+
+.chart-empty-content1-items p {
+  font-size: 2em;
+  text-align: center;
+  margin: 180px 0px;
+}
+
+/* Checkout chart*/
+
+.chart-content1-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.chart-content1-items > * {
+  flex: 1;
+  margin: 20px auto 200px auto;
+}
+
+.checkout-product {
+  display: flex;
+  align-items: center;
+}
+
+/* Checkout Delivery */
+
+.chart-delivery-content1-items {
+  padding: 10px 5px 100px 5px;
+}
+.chart-delivery-content1-items p,
+.checkout-delivery-content2-items p {
+  margin-top: 5px;
+}
+
+.checkout-delivery-content2-items {
+  display: flex;
+  text-align: left;
+  gap: 20px;
+}
+
+.checkout-delivery-content2-items > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-delivery-content2-items h2 {
+  font-size: 1.5em;
+  margin: 0px 0px 10px 0px;
+}
+
+.checkout-delivery-options {
+  padding: 10px 5px 0px 5px;
+}
+
+.checkout-delivery-options .fa {
+  font-size: 4em;
+  margin-top: 106px;
 }

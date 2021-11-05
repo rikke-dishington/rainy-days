@@ -63,6 +63,26 @@ nav ul li {
   padding: 0px 20px;
 }
 
+.checkout-icon {
+  font-size: 1.5em;
+}
+
+/* Images */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.large-image,
+.large-image-women,
+.large-image-men {
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  margin: 0px 20px;
+}
+
 /* Breadcrumbs */
 .breadcrumbs {
   margin: 60px 0px 0px 20px;
@@ -88,19 +108,16 @@ a {
   text-decoration: underline solid 4px #f2c75c;
 }
 
-.cta {
-  background-color: #f2c75c;
-  color: #0a3641;
-  font-size: 1.5em;
-  padding: 20px 60px;
-}
-
+.cta,
 .cta-contact-form {
   font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
   background-color: #f2c75c;
   color: #0a3641;
-  font-size: 1em;
   padding: 20px 60px;
+}
+
+.cta {
+  font-size: 1.5em;
 }
 
 /* Hover */
@@ -109,7 +126,8 @@ a:hover {
   color: #0a3641;
 }
 
-.cta:hover {
+.cta:hover,
+.cta-contact-form:hover {
   background-color: #0a3641;
   color: #f2f2f2;
   font-size: 1.5em;
@@ -119,11 +137,7 @@ a:hover {
 
 .cta-contact-form:hover {
   font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #0a3641;
-  color: #f2f2f2;
   font-size: 1em;
-  padding: 20px 60px;
-  text-decoration: none;
 }
 
 .jackets-list-content img:hover {
@@ -162,16 +176,19 @@ textarea {
   grid-column: -1/1;
 }
 
-.jackets-list-content img {
-  width: 100%;
-}
-
 .jackets-list-content-items {
   text-transform: uppercase;
 }
 
 /* Order by box */
-.order-by-box {
+
+.order-by-select {
+  grid-column: 4;
+  margin: 40px 0px 0px 0px;
+}
+
+.order-by-box,
+.order-by-box-checkout {
   font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: #f2f2f2;
@@ -182,14 +199,8 @@ textarea {
 }
 
 .order-by-box-checkout {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   text-transform: uppercase;
-  background-color: #f2f2f2;
-  color: #0a3641;
-  border: 1px solid #0a3641;
-  padding: 20px;
-  margin: 0px;
 }
 
 /* Footer */
