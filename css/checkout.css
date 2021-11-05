@@ -66,6 +66,7 @@ main {
   font-size: 1.5em;
   display: flex;
   text-align: left;
+  margin-bottom: 40px;
 }
 
 .checkout-form > * {
@@ -149,4 +150,13 @@ footer {
 .checkout-delivery-options .fa {
   font-size: 4em;
   margin-top: 106px;
+}
+
+/* Checkout Payment */
+
+.checkout-payment-form-content {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
