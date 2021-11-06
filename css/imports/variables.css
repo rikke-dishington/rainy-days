@@ -1,5 +1,6 @@
 :root {
   --font: DIN Alternate;
-  --color-text-boarder: #0a3641;
+  --color-text: #0a3641;
   --color-background: #f2f2f2;
+  --boarder: 1px solid #0a3641;
 }

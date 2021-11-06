@@ -50,21 +50,12 @@ main {
   grid-area: item1;
 }
 
-.about-content2-item1 h1 {
-  margin: 0px;
-}
-
 .about-content2-item2 {
   grid-area: item2;
 }
 
 .about-content2-item3 {
   grid-area: item3;
-}
-
-.about-content2-item2 h2,
-.about-content2-item3 h2 {
-  margin: 0px;
 }
 
 footer {

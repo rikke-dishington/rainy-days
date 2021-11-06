@@ -5,25 +5,27 @@
 body {
   font-family: var(--font), Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--color-background);
-  color: var(--color-text-boarder);
+  color: var(--color-text);
   text-align: left;
   min-height: 100vh;
   margin: 0;
-  grid-template-rows: auto 1fr auto;
 }
 
 /* Fonts */
 
 h1 {
   font-size: 3em;
+  margin: 0px;
 }
 
 h2 {
   font-size: 2em;
+  margin: 0px;
 }
 
 h3 {
   font-size: 1.5em;
+  margin: 0px;
 }
 
 p {
@@ -37,7 +39,7 @@ header {
   margin: auto;
   display: flex;
   align-items: center;
-  border: 1px solid var(--color-text-boarder);
+  border: var(--boarder);
   font-size: 2em;
 }
 
@@ -85,9 +87,9 @@ img {
 }
 
 .large-image,
+.home-about-us,
 .large-image-women,
 .large-image-men {
-  background-size: cover;
   height: 50vh;
   position: relative;
 }
@@ -104,7 +106,7 @@ img {
 .breadcrumbs li:not(:last-of-type)::after {
   content: ">";
   margin: 0px 5px;
-  color: var(--color-text-boarder);
+  color: var(--color-text);
 }
 
 /* Hover */
@@ -117,7 +119,7 @@ img {
 }
 
 .jackets-list-content img:hover {
-  box-shadow: 10px 10px 30px var(--color-text-boarder);
+  box-shadow: 10px 10px 30px var(--color-text);
 }
 
 /* Contact form */
@@ -149,7 +151,6 @@ textarea {
 
 .jackets-list-content h1 {
   grid-column: -1/1;
-  margin: 0px;
 }
 
 .jackets-list-content h2 {
@@ -166,18 +167,13 @@ textarea {
 
 /* Order by box */
 
-.order-by-select {
-  grid-column: 4;
-  margin-bottom: 20px;
-}
-
 .order-by-box,
 .order-by-box-checkout {
   font-family: var(--font), Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: #f2f2f2;
-  color: var(--color-text-boarder);
-  border: 1px solid var(--color-text-boarder);
+  color: var(--color-text);
+  border: var(--boarder);
   padding: 20px;
 }
 
@@ -206,7 +202,6 @@ footer a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #e2e2e2;
-  text-align: left;
   padding: 40px 20px;
   grid-gap: 4em;
 }
