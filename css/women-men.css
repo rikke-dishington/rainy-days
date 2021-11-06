@@ -25,6 +25,10 @@ main {
     "content3 content3 content3 content3";
 }
 
+main > * {
+  margin: 60px 60px;
+}
+
 .breadcrumbs {
   grid-area: bread;
 }
@@ -32,11 +36,13 @@ main {
 .large-image-women {
   grid-area: content1;
   background: url("../images/women.jpeg") center no-repeat;
+  margin-top: 20px;
 }
 
 .large-image-men {
   grid-area: content1;
   background: url("../images/men.jpeg") center no-repeat;
+  margin-top: 20px;
 }
 
 .order-by-select {
@@ -45,6 +51,7 @@ main {
 
 .jackets-list-content {
   grid-area: content3;
+  margin-top: 0px;
 }
 
 footer {

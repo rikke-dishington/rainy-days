@@ -1,12 +1,15 @@
-/* General styling */
+@import "imports/links.css";
+@import "imports/variables.css";
 
+/* General styling */
 body {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f2f2f2;
-  color: #0a3641;
+  font-family: var(--font), Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-boarder);
   text-align: left;
   min-height: 100vh;
   margin: 0;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* Fonts */
@@ -34,13 +37,14 @@ header {
   margin: auto;
   display: flex;
   align-items: center;
-  border: 1px solid #0a3641;
+  border: 1px solid var(--color-text-boarder);
   font-size: 2em;
 }
 
 .logo {
   width: 100px;
-  margin: 0px 20px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 nav {
@@ -50,17 +54,23 @@ nav {
 nav ul li {
   display: inline-block;
   list-style: none;
-  padding: 0px 20px;
+  padding-right: 20px;
 }
 
 /* Icons */
 
-.icons {
+.icons .fa {
   font-size: 3em;
+  padding-right: 20px;
+  transition: all 0.3s ease;
 }
 
 .header-icons {
-  padding: 0px 20px;
+  margin-right: 60px;
+}
+
+.header-icons .fa {
+  padding-left: 20px;
 }
 
 .checkout-icon {
@@ -80,12 +90,11 @@ img {
   background-size: cover;
   height: 50vh;
   position: relative;
-  margin: 0px 20px;
 }
 
 /* Breadcrumbs */
 .breadcrumbs {
-  margin: 60px 0px 0px 20px;
+  margin: 60px 0px 0px 60px;
 }
 
 .breadcrumbs li {
@@ -95,54 +104,20 @@ img {
 .breadcrumbs li:not(:last-of-type)::after {
   content: ">";
   margin: 0px 5px;
-  color: #0a3641;
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: #0a3641;
-}
-
-.underline {
-  text-decoration: underline solid 4px #f2c75c;
-}
-
-.cta,
-.cta-contact-form {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f2c75c;
-  color: #0a3641;
-  padding: 20px 60px;
-  border: none;
-}
-
-.cta {
-  font-size: 1.5em;
+  color: var(--color-text-boarder);
 }
 
 /* Hover */
-a:hover {
-  text-decoration: underline solid 4px #f2c75c;
-  color: #0a3641;
+.icons .fa:hover {
+  font-size: 3.5em;
 }
 
-.cta:hover,
-.cta-contact-form:hover {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #0a3641;
-  color: #f2f2f2;
-  padding: 20px 60px;
-  text-decoration: none;
-  border: none;
-}
-
-.cta:hover {
+.checkout-icon {
   font-size: 1.5em;
 }
 
 .jackets-list-content img:hover {
-  box-shadow: 10px 10px 30px #0a3641;
+  box-shadow: 10px 10px 30px var(--color-text-boarder);
 }
 
 /* Contact form */
@@ -157,7 +132,7 @@ a:hover {
 
 input,
 textarea {
-  background-color: #f2f2f2;
+  background-color: var(--color-background);
   border: 2px solid #e2e2e2;
   border-radius: 1px;
   margin: 15px 15px 15px 0px;
@@ -169,12 +144,20 @@ textarea {
 .jackets-list-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 60px 20px;
-  grid-gap: 2em;
+  gap: 2em;
+}
+
+.jackets-list-content h1 {
+  grid-column: -1/1;
+  margin: 0px;
 }
 
 .jackets-list-content h2 {
-  grid-column: -1/1;
+  margin: 0px;
+}
+
+.jackets-list-content h3 {
+  margin-top: 10px;
 }
 
 .jackets-list-content-items {
@@ -185,18 +168,17 @@ textarea {
 
 .order-by-select {
   grid-column: 4;
-  margin: 40px 0px 0px 0px;
+  margin-bottom: 20px;
 }
 
 .order-by-box,
 .order-by-box-checkout {
-  font-family: "DIN Alternate", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font), Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: #f2f2f2;
-  color: #0a3641;
-  border: 1px solid #0a3641;
+  color: var(--color-text-boarder);
+  border: 1px solid var(--color-text-boarder);
   padding: 20px;
-  margin: 0px;
 }
 
 .order-by-box-checkout {
@@ -207,6 +189,7 @@ textarea {
 /* Footer */
 footer {
   background-color: #0a3641;
+  margin-top: 60px;
 }
 
 footer h2 {

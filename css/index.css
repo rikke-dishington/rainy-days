@@ -26,11 +26,14 @@ main {
     "content4 content4 content4 content4";
 }
 
+main > * {
+  margin: 60px 60px;
+}
+
 .large-image {
   grid-area: content1;
   background: url("../images/hiking.jpeg") center no-repeat;
   background-size: cover;
-  margin: 60px 20px;
 }
 
 .jackets-list-content {
@@ -43,34 +46,29 @@ main {
   background-size: cover;
   min-height: 50vh;
   position: relative;
-  margin: 60px 20px;
 }
 
 .home-about-us-item {
   position: relative;
   text-align: center;
-  top: 200px;
+  top: 150px;
 }
 
 .home-about-us-item h2 {
   font-size: 4em;
   color: #f2f2f2;
   text-shadow: 1px 1px 5px #000000;
-  margin: 0px 0px 40px 0px;
+  margin-bottom: 40px;
 }
 
 .home-contact-us {
   grid-area: content4;
   display: flex;
-  margin: 60px 20px;
+  gap: 2em;
 }
 
 .home-contact-us * {
   flex: 1;
-}
-
-.home-contact-us-item {
-  margin: 0px 60px 0px 0px;
 }
 
 .home-contact-us h2 {

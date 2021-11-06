@@ -31,6 +31,7 @@ main {
   grid-area: content1;
   background: url("../images/about-us.jpeg") center no-repeat;
   background-size: cover;
+  margin: 0px 30px 60px 60px;
 }
 
 .about-content2 {
@@ -41,8 +42,8 @@ main {
   grid-template-areas:
     "item1 item1 item1 item1"
     "item2 item2 item3 item3";
-  margin: 0px 20px;
-  grid-gap: 4em;
+  gap: 2em;
+  margin: 0px 60px 60px 30px;
 }
 
 .about-content2-item1 {
