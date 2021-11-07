@@ -49,7 +49,8 @@ main > * {
 .home-about-us-item {
   position: relative;
   text-align: center;
-  margin-top: 100px;
+  margin: auto;
+  top: 35%;
 }
 
 .home-about-us-item h2 {
