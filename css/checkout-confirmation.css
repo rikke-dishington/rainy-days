@@ -31,12 +31,13 @@ header {
 
 .main-checkout-confirmation h1 {
   padding: 10px 0px;
+  margin: 0px 40px;
 }
 
 .main-checkout-confirmation p {
   font-size: 1.5em;
   padding-bottom: 20px;
-  margin: 0px 20px;
+  margin: 0px 40px;
 }
 
 footer {

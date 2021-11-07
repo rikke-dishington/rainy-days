@@ -36,18 +36,18 @@ main > * {
 
 .checkout-state {
   grid-area: bread;
-  font-size: 2em;
-  margin: 60px 20px;
+  font-size: 1.5em;
+  margin: 60px auto;
+  align-items: center;
 }
 
 .checkout-state li {
   display: inline;
-  margin: 0px 40px;
+  margin: 0px 20px;
 }
 
 .checkout-content1 {
   grid-area: content1;
-  margin-right: 30px;
 }
 
 .checkout-content1 h1 {
@@ -69,11 +69,9 @@ main > * {
 
 .checkout-content2 {
   grid-area: content2;
-  margin-left: 30px;
 }
 
 .checkout-form {
-  font-size: 1.5em;
   display: flex;
   margin-bottom: 40px;
 }
