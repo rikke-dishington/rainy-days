@@ -1,12 +1,12 @@
 /* Jacket */
 .body-jacket {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    "nav"
+    "main"
+    "footer";
 }
 
 header {
@@ -16,13 +16,13 @@ header {
 .main-jacket {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "bread bread bread bread"
-    "content1 content1 content1 content1"
-    "content2 content2 content2 content2"
-    "footer footer footer footer";
+    "bread"
+    "content1"
+    "content2"
+    "footer";
 }
 
 main > * {
@@ -45,13 +45,16 @@ main > * {
   flex: 1;
 }
 
-.jacket-specific-images {
-  display: flex;
-  flex-direction: column-reverse;
+.jacket-image-large {
+  border: var(--boarder);
+  max-width: 600px;
+  max-height: 700px;
 }
 
 .jacket-image {
   border: var(--boarder);
+  max-width: 500px;
+  max-height: 600px;
 }
 
 .jacket-image-thumbnails {
@@ -73,7 +76,7 @@ main > * {
 .size {
   display: flex;
   flex-direction: row;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: uppercase;
   margin-top: 40px;
   margin-bottom: 60px;
@@ -89,8 +92,8 @@ main > * {
 }
 
 .size-items > * {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .related-list-content {
