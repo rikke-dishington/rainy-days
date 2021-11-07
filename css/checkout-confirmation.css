@@ -1,5 +1,5 @@
-/* Confirmation */
-body {
+/* Checkout Confirmation */
+.body-checkout-confirmation {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
@@ -13,34 +13,29 @@ header {
   grid-area: nav;
 }
 
-main {
+.main-checkout-confirmation {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  margin-bottom: 150px;
+  margin-bottom: 20px;
 }
 
-main > * {
-  max-width: 500px;
+.main-checkout-confirmation > * {
   margin: auto;
 }
 
 .confirm-icon {
-  font-size: 15em;
+  font-size: 10em;
   color: #6c7259;
 }
 
-main h1 {
-  padding: 20px 0px;
+.main-checkout-confirmation h1 {
+  padding: 10px 0px;
 }
 
-main p {
+.main-checkout-confirmation p {
   font-size: 1.5em;
-  padding-bottom: 60px;
-}
-
-main a {
-  padding: 20px 0px;
+  padding-bottom: 20px;
 }
 
 footer {

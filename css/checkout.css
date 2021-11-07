@@ -1,36 +1,43 @@
 /* Checkout styling */
-body {
+.body-checkout-empty,
+.body-checkout-chart,
+.body-checkout-delivery,
+.body-checkout-payment {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    "nav"
+    "main"
+    "footer";
 }
 
 header {
   grid-area: nav;
 }
 
-main {
+.main-checkout-empty,
+.main-checkout-chart,
+.main-checkout-delivery,
+.main-checkout-payment {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "bread bread bread bread"
-    "content1 content1 content2 content2";
+    "bread"
+    "content1"
+    "content2";
 }
 
 main > * {
-  margin: 60px;
+  margin: 20px;
 }
 
 .checkout-state {
   grid-area: bread;
   font-size: 2em;
-  margin: 60px auto;
+  margin: 60px 20px;
 }
 
 .checkout-state li {

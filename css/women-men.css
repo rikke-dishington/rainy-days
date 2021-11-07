@@ -1,32 +1,32 @@
 /* Women */
-body {
+.body-women-men {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    "nav"
+    "main"
+    "footer";
 }
 
 header {
   grid-area: nav;
 }
 
-main {
+.main-women-men {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "bread bread bread bread"
-    "content1 content1 content1 content1"
-    "content2 content2 content2 content2"
-    "content3 content3 content3 content3";
+    "bread"
+    "content1"
+    "content2"
+    "content3";
 }
 
 main > * {
-  margin: 60px 60px;
+  margin: 20px;
 }
 
 .breadcrumbs {
@@ -49,7 +49,7 @@ main > * {
 
 .order-by-select {
   grid-area: content2;
-  grid-column: 4;
+  grid-column: 1;
   margin-bottom: 20px;
 }
 

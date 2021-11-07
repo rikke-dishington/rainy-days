@@ -87,16 +87,18 @@ img {
 }
 
 .large-image,
+.large-image-home,
 .home-about-us,
 .large-image-women,
-.large-image-men {
-  height: 50vh;
+.large-image-men,
+.large-image-about {
+  height: 30vh;
   position: relative;
 }
 
 /* Breadcrumbs */
 .breadcrumbs {
-  margin: 60px 0px 0px 60px;
+  margin: 20px 0px 0px 20px;
 }
 
 .breadcrumbs li {
@@ -145,7 +147,7 @@ textarea {
 /* Jackets list */
 .jackets-list-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1fr);
   gap: 2em;
 }
 
@@ -200,7 +202,7 @@ footer a {
 
 .footer-content1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: #e2e2e2;
   padding: 40px 20px;
   grid-gap: 4em;
