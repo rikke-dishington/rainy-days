@@ -38,25 +38,47 @@ header {
   width: 100%;
   margin: auto;
   display: flex;
+  position: relative;
   align-items: center;
   border: var(--boarder);
   font-size: 2em;
+  justify-content: space-between;
 }
 
 .logo {
   width: 100px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 nav {
   flex: 1;
+  display: none;
+  position: fixed;
+  top: 88px;
+  background: var(--color-background);
+  border: var(--boarder);
+  z-index: 1000px;
+  right: 0px;
 }
 
 nav ul li {
-  display: inline-block;
+  display: block;
   list-style: none;
-  padding-right: 20px;
+  padding: 20px 60px;
+}
+
+header label {
+  margin-right: 20px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav,
+.header-icons {
+  display: block;
 }
 
 /* Icons */
@@ -65,14 +87,6 @@ nav ul li {
   font-size: 3em;
   padding-right: 20px;
   transition: all 0.3s ease;
-}
-
-.header-icons {
-  margin-right: 60px;
-}
-
-.header-icons .fa {
-  padding-left: 20px;
 }
 
 .checkout-icon {

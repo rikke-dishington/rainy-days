@@ -35,14 +35,14 @@ main > * {
 
 .large-image-women {
   grid-area: content1;
-  background: url("../images/women.jpeg") center no-repeat;
+  background: url("../images/women.jpg") center no-repeat;
   background-size: cover;
   margin-top: 20px;
 }
 
 .large-image-men {
   grid-area: content1;
-  background: url("../images/men.jpeg") center no-repeat;
+  background: url("../images/men.jpg") center no-repeat;
   background-size: cover;
   margin-top: 20px;
 }

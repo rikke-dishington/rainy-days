@@ -30,7 +30,7 @@ header {
 
 .large-image-about {
   grid-area: content1;
-  background: url("../images/about-us.jpeg") center no-repeat;
+  background: url("../images/about.jpg") center no-repeat;
   background-size: cover;
   margin: 20px;
 }
