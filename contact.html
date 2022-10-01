@@ -94,17 +94,30 @@
       </section>
       <section class="contact-content2">
         <div class="contact-form">
-          <form action="submit.php" metode="POST">
-            <div class="contact-form-content">
+          <form id="contactForm">
+            <div>
               <label for="fullname">Full Name</label>
-              <input type="text" name="fullname" id="fullname" />
-              <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" />
-              <label for="message">Message</label>
-              <textarea id="message" name="message"></textarea>
+              <input type="text" name="fullName" id="fullName" />
+              <div class="form-error" id="fullNameError">
+                Please enter your full name
+              </div>
             </div>
             <div>
-              <input type="submit" value="Submit" class="cta-contact-form" />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+              <div class="form-error" id="emailError">
+                Please enter a valid email address
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea type="text" name="message" id="message"></textarea>
+              <div class="form-error" id="messageError">
+                The message must be at least 10 characters
+              </div>
+            </div>
+            <div>
+              <button class="cta-contact-form">Submit</button>
             </div>
           </form>
         </div>
@@ -146,5 +159,6 @@
         <p>&copy 2021 Rainy Days All Rights Reserved</p>
       </section>
     </footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>
