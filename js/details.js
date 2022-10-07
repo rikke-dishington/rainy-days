@@ -8,7 +8,7 @@ const id = params.get("id");
 
 console.log(id);
 
-const url = "http://127.0.0.1:5501/" + id;
+const url = "https://musing-payne-7eb636.netlify.app/" + id;
 
 console.log(url);
 
