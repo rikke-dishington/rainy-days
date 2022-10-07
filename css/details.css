@@ -9,24 +9,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.breadcrumb-nav {
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--light-grey);
-}
-
-.details-genres {
-  margin-bottom: 1em;
-}
-
-.details-date {
-  margin-bottom: 1em;
-  font-style: italic;
-  font-weight: bold;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}

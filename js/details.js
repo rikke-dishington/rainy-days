@@ -1,3 +1,5 @@
+import products from "./products.js";
+
 const detailContainer = document.querySelector(".products-details");
 
 const queryString = document.location.search;
@@ -6,30 +8,13 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
+const product = products + id;
 
-const url = "https://musing-payne-7eb636.netlify.app/" + id;
+console.log(product);
 
-console.log(url);
-
-async function fetchGame() {
-  try {
-    const response = await fetch(url);
-    const details = await response.json();
-
-    console.log(details);
-
-    createHtml(details);
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-fetchGame();
-
-function createHtml(details) {
-  detailsContainer.innerHTML = `<h1>${details.title}</h1>
-                                <div class="details-image" 
-                                    style="background-image: url('${details.background_image}')"></div>
-                                <div class="details-description">${details.description}</div>`;
+function createHtml(product) {
+  detailContainer.innerHTML = `<div class="details-image" url('${product.image}')"></div>
+                                <div class="details-title"><h1>${product.title}</h1></div>
+                                <div class="details-description"><p>${product.description}</p></div>
+                                <div class="details-price"><h2>${product.price}</h2></div>`;
 }
